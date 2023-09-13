@@ -38,24 +38,27 @@
 
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(7, 1fr);
             grid-template-rows: 60px auto 100px;
-            height: 100vh
+            height: 100vh;
+            grid-template-areas:
+                "h h h h h h h"
+                "s s c c c c c"
+                "f f f f f f f"
         }
 
         .header {
-            grid-column: 1/-1;
+            grid-area: h;
 
         }
 
         .sidebar {
-            grid-row: auto;
-            grid-column: 1/2;
+            grid-area: s;
         }
 
 
         .footer {
-            grid-column: 1/-1;
+            grid-area: f;
         }
 
         .contant-area {
@@ -64,6 +67,7 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             margin: 20px;
+            grid-area: c;
         }
 
         .contant-area .contant-item {
