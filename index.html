@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .center {
+            display: grid;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .green {
+            background-color: rgb(0, 102, 0);
+            color: #fff;
+        }
+
+        .red {
+            background-color: red;
+            color: #fff;
+        }
+
+        .blue {
+            background-color: blue;
+            color: #fff;
+        }
+
+        /* grid start  */
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: 60px auto 100px;
+            height: 100vh
+        }
+
+        .header {
+            grid-column: 1/-1;
+
+        }
+
+        .sidebar {
+            grid-row: auto;
+            grid-column: 1/2;
+        }
+
+
+        .footer {
+            grid-column: 1/-1;
+        }
+
+        .contant-area {
+            grid-column: 2/-1;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 20px;
+        }
+
+        .contant-area .contant-item {
+            background-color: rgb(231, 184, 29);
+        }
+
+        /* grid end  */
+    </style>
+</head>
+
+
+<body>
+    <div class="grid-container">
+        <div class="header green center">Header</div>
+        <div class="sidebar blue center">SideBar</div>
+        <div class="contant-area">
+
+            <div class="contant-item center">1</div>
+            <div class="contant-item center">2</div>
+            <div class="contant-item center">3</div>
+            <div class="contant-item center">4</div>
+            <div class="contant-item center">5</div>
+            <div class="contant-item center">6</div>
+            <div class="contant-item center">7</div>
+            <div class="contant-item center">8</div>
+            <div class="contant-item center">9</div>
+            <div class="contant-item center">10</div>
+            <div class="contant-item center">11</div>
+            <div class="contant-item center">12</div>
+        </div>
+        <div class="footer  center red">Footer</div>
+    </div>
+</body>
+
+</html>
